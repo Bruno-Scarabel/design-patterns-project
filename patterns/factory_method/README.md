@@ -21,7 +21,6 @@ O Factory Method cria uma **classe base com um método-fábrica** (factory metho
 
 ## Estrutura UML
 
-```mermaid
 classDiagram
     class Creator {
         +factoryMethod()
