@@ -21,3 +21,37 @@ O Factory Method cria uma **classe base com um método-fábrica** (factory metho
 
 ## Estrutura UML
 
+```mermaid
+classDiagram
+    class Creator {
+        +factoryMethod()
+        +someOperation()
+    }
+
+    class ConcreteCreatorA {
+        +factoryMethod()
+    }
+
+    class ConcreteCreatorB {
+        +factoryMethod()
+    }
+
+    class Product {
+        +use()
+    }
+
+    class ConcreteProductA {
+        +use()
+    }
+
+    class ConcreteProductB {
+        +use()
+    }
+
+    Creator <|-- ConcreteCreatorA
+    Creator <|-- ConcreteCreatorB
+
+    Product <|-- ConcreteProductA
+    Product <|-- ConcreteProductB
+
+    Creator --> Product : cria
