@@ -54,3 +54,4 @@ classDiagram
     Product <|-- ConcreteProductB
 
     Creator --> Product : cria
+    
