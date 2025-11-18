@@ -14,3 +14,28 @@ quando o sujeito muda, ele **notifica** todos os observadores.
 
 Estrutura UML
 
+classDiagram
+    class Subject {
+        +attach(Observer)
+        +detach(Observer)
+        +notify()
+    }
+
+    class ConcreteSubject {
+        -state
+        +getState()
+        +setState()
+    }
+
+    class Observer {
+        +update()
+    }
+
+    class ConcreteObserver {
+        -observerState
+        +update()
+    }
+
+    Subject <|-- ConcreteSubject
+    Observer <|-- ConcreteObserver
+    ConcreteSubject --> Observer : notifica
