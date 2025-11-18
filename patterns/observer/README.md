@@ -12,5 +12,5 @@ Por exemplo, em um sistema de notícias, quando uma nova matéria é publicada, 
 O padrão Observer cria uma relação **um-para-muitos** entre objetos:  
 quando o sujeito muda, ele **notifica** todos os observadores.
 
-## Estrutura UML
+Estrutura UML
 
