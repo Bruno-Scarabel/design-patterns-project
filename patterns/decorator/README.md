@@ -19,3 +19,30 @@ Assim, você pode empilhar funcionalidades, como camadas.
 
 ## Estrutura UML
 
+classDiagram
+    class Component {
+        +operation()
+    }
+
+    class ConcreteComponent {
+        +operation()
+    }
+
+    class Decorator {
+        -Component component
+        +operation()
+    }
+
+    class ConcreteDecoratorA {
+        +operation()
+    }
+
+    class ConcreteDecoratorB {
+        +operation()
+    }
+
+    Component <|-- ConcreteComponent
+    Component <|-- Decorator
+    Decorator <|-- ConcreteDecoratorA
+    Decorator <|-- ConcreteDecoratorB
+    Decorator --> Component
